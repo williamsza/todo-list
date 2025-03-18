@@ -4,6 +4,7 @@ import br.com.todo.list.model.Tarefa;
 import br.com.todo.list.repository.TarefaStorage;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class TarefaService {
 
@@ -20,5 +21,9 @@ public class TarefaService {
         }
         storage.adicionar(tarefa);
 
+    }
+
+    public List<Tarefa> listarTodas(){
+        return storage.listarTodas();
     }
 }
