@@ -6,7 +6,7 @@ public class Tarefa {
     private String titulo;
     private String descricao;
     private LocalDate dataLimite;
-
+    private Status status;
 
     public enum Status{
         PENDENTE, EM_ANDAMENTO, CONCLUIDO
@@ -16,6 +16,7 @@ public class Tarefa {
         this.titulo = titulo;
         this.descricao = descricao;
         this.dataLimite = dataLimite;
+        this.status = status;
     }
 
     public String getTitulo() {
@@ -42,12 +43,21 @@ public class Tarefa {
         this.dataLimite = dataLimite;
     }
 
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
     @Override
     public String toString() {
         return "Tarefa{" +
                 "titulo='" + titulo + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", dataLimite=" + dataLimite +
+                ", status=" + status +
                 '}';
     }
 }
