@@ -12,7 +12,7 @@ public class Tarefa {
         PENDENTE, EM_ANDAMENTO, CONCLUIDO
     }
 
-    public Tarefa(String titulo, String descricao, LocalDate dataLimite) {
+    public Tarefa(String titulo, String descricao, LocalDate dataLimite, Status status) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.dataLimite = dataLimite;

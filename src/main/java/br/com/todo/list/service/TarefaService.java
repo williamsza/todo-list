@@ -23,7 +23,12 @@ public class TarefaService {
 
     }
 
-    public List<Tarefa> listarTodas(){
+    public List<Tarefa> listarTodas() {
         return storage.listarTodas();
+    }
+
+    public List<Tarefa> filtrarPorStatus(Tarefa.Status status) {
+        return storage.filtarPorStatus(status);
+
     }
 }
