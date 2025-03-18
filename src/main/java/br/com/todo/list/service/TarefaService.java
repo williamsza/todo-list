@@ -31,4 +31,10 @@ public class TarefaService {
         return storage.filtarPorStatus(status);
 
     }
+
+    public List<Tarefa> ordenarPorDataLimite() {
+        return storage.ordenarPorDataLimite();
+
+
+    }
 }
