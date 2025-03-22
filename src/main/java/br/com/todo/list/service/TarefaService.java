@@ -1,6 +1,7 @@
 package br.com.todo.list.service;
 
 import br.com.todo.list.model.Tarefa;
+import br.com.todo.list.model.status.Status;
 import br.com.todo.list.repository.TarefaStorage;
 
 import java.time.LocalDate;
@@ -9,6 +10,7 @@ import java.util.List;
 public class TarefaService {
 
     private TarefaStorage storage = new TarefaStorage();
+    private Status status;
 
     public void adicionarTarefa(Tarefa tarefa) {
         if (tarefa.getTitulo().length() < 3) {
@@ -27,14 +29,13 @@ public class TarefaService {
         return storage.listarTodas();
     }
 
-    public List<Tarefa> filtrarPorStatus(Tarefa.Status status) {
+    public List<Tarefa> filtrarPorStatus(Status status) {
         return storage.filtarPorStatus(status);
 
     }
 
     public List<Tarefa> ordenarPorDataLimite() {
         return storage.ordenarPorDataLimite();
-
 
     }
 }
