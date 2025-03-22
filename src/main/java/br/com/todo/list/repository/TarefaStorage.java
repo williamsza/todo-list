@@ -1,6 +1,7 @@
 package br.com.todo.list.repository;
 
 import br.com.todo.list.model.Tarefa;
+import br.com.todo.list.model.status.Status;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ public class TarefaStorage {
         return tarefas;
     }
 
-    public List<Tarefa> filtarPorStatus(Tarefa.Status status) {
+    public List<Tarefa> filtarPorStatus(Status status) {
         return tarefas.stream()
                 .filter(t -> t.getStatus().equals(status))
                 .collect(Collectors.toList());

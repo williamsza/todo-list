@@ -1,5 +1,7 @@
 package br.com.todo.list.model;
 
+import br.com.todo.list.model.status.Status;
+
 import java.time.LocalDate;
 
 public class Tarefa {
@@ -7,10 +9,6 @@ public class Tarefa {
     private String descricao;
     private LocalDate dataLimite;
     private Status status;
-
-    public enum Status{
-        PENDENTE, EM_ANDAMENTO, CONCLUIDO
-    }
 
     public Tarefa(String titulo, String descricao, LocalDate dataLimite, Status status) {
         this.titulo = titulo;
@@ -43,12 +41,12 @@ public class Tarefa {
         this.dataLimite = dataLimite;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
     public Status getStatus() {
         return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 
     @Override
