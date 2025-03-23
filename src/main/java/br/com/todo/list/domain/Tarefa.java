@@ -1,12 +1,11 @@
 package br.com.todo.list.domain;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Tarefa {
     private String titulo;
     private String descricao;
-    private LocalDate dataLimite;
+    private LocalDateTime dataLimite;
     private Status status;
 
     public Tarefa(String titulo, String descricao, LocalDateTime dataLimite, Status status) {
@@ -14,6 +13,9 @@ public class Tarefa {
         this.descricao = descricao;
         this.dataLimite = dataLimite;
         this.status = status;
+    }
+    public LocalDateTime getPrazo(){
+        return prazo;
     }
 
     public String getTitulo() {
@@ -32,11 +34,11 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
-    public LocalDate getDataLimite() {
+    public LocalDateTime getDataLimite() {
         return dataLimite;
     }
 
-    public void setDataLimite(LocalDate dataLimite) {
+    public void setDataLimite(LocalDateTime dataLimite) {
         this.dataLimite = dataLimite;
     }
 

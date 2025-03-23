@@ -18,7 +18,7 @@ public class TarefaService {
     private Notificador notificador;
     private ValidadorDeTarefa validador;
 
-    public TarefaService( Notificador notificador, ValidadorDeTarefa validador) {
+    public TarefaService(Notificador notificador, ValidadorDeTarefa validador) {
         this.notificador = notificador;
         this.validador = new ValidadorDeTarefa();
     }
@@ -30,12 +30,20 @@ public class TarefaService {
         notificador.notificar(tarefa);
 
     }
-    public List<Tarefa> listarTarefas(){
+
+    public List<Tarefa> listarTarefas() {
         return tarefas;
     }
-    public List<Tarefa> filtrarTarefasPorStatus(Status status){
+
+    public List<Tarefa> filtrarTarefasPorStatus(Status status) {
         return tarefas.stream()
                 .filter(tarefa -> tarefa.getStatus() == status)
+                .toList();
+    }
+
+    public List<Tarefa> listarTarefasOrdenadasPorPrazo() {
+        return tarefas.stream()
+                .sorted((t1, t2) -> t1.getPrazo().compareTo(t2.getPrazo()))
                 .toList();
     }
 }
