@@ -5,16 +5,18 @@ import java.time.LocalDateTime;
 public class Tarefa {
     private String titulo;
     private String descricao;
-    private LocalDateTime dataLimite;
+    private LocalDateTime prazo;
     private Status status;
 
-    public Tarefa(String titulo, String descricao, LocalDateTime dataLimite, Status status) {
+    public Tarefa(String titulo, String descricao, LocalDateTime prazo, Status status) {
         this.titulo = titulo;
         this.descricao = descricao;
-        this.dataLimite = dataLimite;
-        this.status = status;
+        this.prazo = prazo;
+
+
     }
-    public LocalDateTime getPrazo(){
+
+    public LocalDateTime getPrazo() {
         return prazo;
     }
 
@@ -35,11 +37,11 @@ public class Tarefa {
     }
 
     public LocalDateTime getDataLimite() {
-        return dataLimite;
+        return prazo;
     }
 
     public void setDataLimite(LocalDateTime dataLimite) {
-        this.dataLimite = dataLimite;
+        this.prazo = prazo;
     }
 
     public Status getStatus() {
@@ -55,7 +57,7 @@ public class Tarefa {
         return "Tarefa{" +
                 "titulo='" + titulo + '\'' +
                 ", descricao='" + descricao + '\'' +
-                ", dataLimite=" + dataLimite +
+                ", prazo=" + prazo +
                 ", status=" + status +
                 '}';
     }

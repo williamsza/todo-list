@@ -10,6 +10,7 @@ import br.com.todo.list.repository.TarefaStorage;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class TarefaService {
@@ -43,7 +44,7 @@ public class TarefaService {
 
     public List<Tarefa> listarTarefasOrdenadasPorPrazo() {
         return tarefas.stream()
-                .sorted((t1, t2) -> t1.getPrazo().compareTo(t2.getPrazo()))
+                .sorted(Comparator.comparing(Tarefa::getPrazo))
                 .toList();
     }
 }
