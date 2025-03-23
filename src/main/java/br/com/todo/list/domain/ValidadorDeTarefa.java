@@ -10,11 +10,9 @@ public class ValidadorDeTarefa {
         if (titulo.length() < 3) {
             throw new TarefaExcepiton("O Título deve ter pelo menos 3 caracteres. ");
 
-
         }
         if (prozo.isBefore(LocalDateTime.now())) {
             throw new TarefaExcepiton("O prozo não pode ser do passado.  ");
-
 
         }
 
