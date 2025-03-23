@@ -27,7 +27,13 @@ public class TarefaController {
         }
 
     }
-    public List<Tarefa> listarTarefas(){
+
+    public List<Tarefa> listarTarefas() {
         return tarefaService.listarTarefas();
+    }
+
+    public List<Tarefa> filtrarTarefasPorStatus(Status status) {
+        return tarefaService.filtrarTarefasPorStatus(status);
+
     }
 }

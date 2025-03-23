@@ -33,4 +33,9 @@ public class TarefaService {
     public List<Tarefa> listarTarefas(){
         return tarefas;
     }
+    public List<Tarefa> filtrarTarefasPorStatus(Status status){
+        return tarefas.stream()
+                .filter(tarefa -> tarefa.getStatus() == status)
+                .toList();
+    }
 }
