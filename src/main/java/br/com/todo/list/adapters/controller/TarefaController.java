@@ -2,9 +2,11 @@ package br.com.todo.list.adapters.controller;
 
 import br.com.todo.list.application.TarefaService;
 import br.com.todo.list.domain.Status;
+import br.com.todo.list.domain.Tarefa;
 import br.com.todo.list.domain.TarefaExcepiton;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class TarefaController {
     private TarefaService tarefaService;
@@ -24,5 +26,8 @@ public class TarefaController {
 
         }
 
+    }
+    public List<Tarefa> listarTarefas(){
+        return tarefaService.listarTarefas();
     }
 }

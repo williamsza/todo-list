@@ -30,4 +30,7 @@ public class TarefaService {
         notificador.notificar(tarefa);
 
     }
+    public List<Tarefa> listarTarefas(){
+        return tarefas;
+    }
 }
