@@ -2,40 +2,22 @@ package br.com.todo.list.application;
 
 import br.com.todo.list.domain.Tarefa;
 import br.com.todo.list.domain.Status;
+import br.com.todo.list.domain.ValidadorDeTarefa;
+import br.com.todo.list.infrastructure.Notificador;
 import br.com.todo.list.repository.TarefaStorage;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TarefaService {
 
-    private TarefaStorage storage = new TarefaStorage();
-    private Status status;
+    private List<Tarefa> tarefas = new ArrayList<>();
+    private Notificador notificador;
+    private ValidadorDeTarefa validador;
 
-    public void adicionarTarefa(Tarefa tarefa) {
-        if (tarefa.getTitulo().length() < 3) {
-            System.out.println("Tarefa deve ter pelo menos 3 caracteres.");
-
-        }
-        if (tarefa.getDataLimite().isBefore(LocalDate.now())) {
-            System.out.println("Data limite não pode ser do passado");
-
-        }
-        storage.adicionar(tarefa);
-
-    }
-
-    public List<Tarefa> listarTodas() {
-        return storage.listarTodas();
-    }
-
-    public List<Tarefa> filtrarPorStatus(Status status) {
-        return storage.filtarPorStatus(status);
-
-    }
-
-    public List<Tarefa> ordenarPorDataLimite() {
-        return storage.ordenarPorDataLimite();
-
+    public TarefaService( Notificador notificador, ValidadorDeTarefa validador) {
+        this.notificador = notificador;
+        this.validador = new ValidadorDeTarefa();
     }
 }
