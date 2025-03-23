@@ -1,4 +1,4 @@
-package br.com.todo.list.model.status;
+package br.com.todo.list.domain;
 
 public enum Status {
     PENDENTE,

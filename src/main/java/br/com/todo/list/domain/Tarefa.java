@@ -1,6 +1,4 @@
-package br.com.todo.list.model;
-
-import br.com.todo.list.model.status.Status;
+package br.com.todo.list.domain;
 
 import java.time.LocalDate;
 

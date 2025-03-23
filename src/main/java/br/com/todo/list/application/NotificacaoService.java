@@ -1,6 +1,6 @@
-package br.com.todo.list.service;
+package br.com.todo.list.application;
 
-import br.com.todo.list.model.Tarefa;
+import br.com.todo.list.domain.Tarefa;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;

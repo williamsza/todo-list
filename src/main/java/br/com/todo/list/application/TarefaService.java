@@ -1,7 +1,7 @@
-package br.com.todo.list.service;
+package br.com.todo.list.application;
 
-import br.com.todo.list.model.Tarefa;
-import br.com.todo.list.model.status.Status;
+import br.com.todo.list.domain.Tarefa;
+import br.com.todo.list.domain.Status;
 import br.com.todo.list.repository.TarefaStorage;
 
 import java.time.LocalDate;

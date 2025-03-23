@@ -1,7 +1,7 @@
 package br.com.todo.list.repository;
 
-import br.com.todo.list.model.Tarefa;
-import br.com.todo.list.model.status.Status;
+import br.com.todo.list.domain.Tarefa;
+import br.com.todo.list.domain.Status;
 
 import java.util.ArrayList;
 import java.util.List;
