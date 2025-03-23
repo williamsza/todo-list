@@ -1,6 +1,7 @@
 package br.com.todo.list.domain;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Tarefa {
     private String titulo;
@@ -8,7 +9,7 @@ public class Tarefa {
     private LocalDate dataLimite;
     private Status status;
 
-    public Tarefa(String titulo, String descricao, LocalDate dataLimite, Status status) {
+    public Tarefa(String titulo, String descricao, LocalDateTime dataLimite, Status status) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.dataLimite = dataLimite;
