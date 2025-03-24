@@ -38,7 +38,7 @@ public class TodoListApplication {
             System.out.println("5. Sair");
 
             int opcao = scanner.nextInt();
-            scanner.nextInt();
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -53,9 +53,9 @@ public class TodoListApplication {
 
                     try {
                         LocalDateTime prazo = LocalDateTime.parse(prazoInput, formatter);
-                        System.out.println("Status (PENDENTE, EM_ANDAMENTO, CONCLUIDO): ");
+                        System.out.print("Status (PENDENTE, EM_ANDAMENTO, CONCLUIDO): ");
                         String statusInput = scanner.nextLine();
-                        Status status = Status.valueOf(statusInput.toLowerCase());
+                        Status status = Status.valueOf(statusInput.toUpperCase());
 
                         tarefaController.adicionarTarefa(titulo, descricao, prazo, status);
                     } catch (Exception ex) {
