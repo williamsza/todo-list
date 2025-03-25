@@ -36,7 +36,9 @@ public class TarefaController {
         return tarefaService.filtrarTarefasPorStatus(status);
 
     }
-    public List<Tarefa> listarTarefasOrdenadasPorPrazo(){
+
+    public List<Tarefa> listarTarefasOrdenadasPorPrazo() {
         return tarefaService.listarTarefasOrdenadasPorPrazo();
     }
 }
+
