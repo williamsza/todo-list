@@ -19,9 +19,9 @@ public class TarefaService {
         this.validador = new ValidadorDeTarefa();
     }
 
-
     public void adicionarTarefa(String titulo, String descricao, LocalDateTime prazo, Status status) throws TarefaExcepiton {
         validador.validar(titulo, descricao, prazo, status);
+
         Tarefa tarefa = new Tarefa(titulo, descricao, prazo, status);
         tarefas.add(tarefa);
         notificador.notificar(tarefa);

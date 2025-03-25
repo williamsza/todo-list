@@ -10,6 +10,7 @@ public class NotificadorDePrazo implements Notificador {
     public void notificar(Tarefa tarefa) {
 
         long tempoAtePrazo = tarefa.getPrazo().atZone(java.time.ZoneId.systemDefault()).toInstant().toEpochMilli() - System.currentTimeMillis();
+        //if (tempoAtePrazo > 0 && tempoAtePrazo <= TimeUnit.MINUTES.toMillis(30)) {
         if (tempoAtePrazo > 0 && tempoAtePrazo <= TimeUnit.MINUTES.toMillis(30)) {
             CompletableFuture.runAsync(() -> {
 
